@@ -7,12 +7,12 @@ function DecButton(){
     const {account, library} = useWeb3React()
     const signer = library?.getSigner(account).connectUnchecked()
     const onClick = () => {
-        const counterContract = new ethers.counterContract(
-            "0x9acDeC484dFD452ce56bb666A432916702fB2F0E",
+        const counterContract = new ethers.Contract(
+            '0x9acDeC484dFD452ce56bb666A432916702fB2F0E',
             COUNTER_ABI,
             signer
         )
-        counterContract.inc()
+        counterContract.dec({gasLimit:1000000})
         .then(result => console.log(result))
     }
     return (

@@ -1,1 +1,2 @@
-export const COUNTER_ABI = ['function get() public view returns (uint)','function inc() public']
+export const COUNTER_ABI = ['function get() public view returns (uint)','function inc() public','function dec() public']
+export const ROUTER_ABI =['function addLiquidityETH(address token, uint amountTokenDesired, uint amountTokenMin, uint amountETHMin,address to,uint deadline) external payable returns (uint amountToken, uint amountETH, uint liquidity)','function removeLiquidityETH(address token,uint liquidity, uint amountTokenMin,uint amountETHMin,address to, uint deadline) external returns (uint amountToken, uint amountETH)']

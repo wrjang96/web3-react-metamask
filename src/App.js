@@ -2,6 +2,8 @@ import Account from "./components/Account";
 import Count from "./components/Count";
 import IncButton from "./components/IncButton";
 import DecButton from "./components/DecButton";
+import AddLiquidity from "./components/AddLiquidity";
+import RemoveLiquidity from "./components/RemoveLiquidity";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Count/>
       <IncButton/>
       <DecButton/>
+      <AddLiquidity/>
+      <RemoveLiquidity/>
     </div>
   );
 }
