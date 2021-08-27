@@ -8,7 +8,7 @@ import getLibrary from "./library";
 ReactDOM.render(
   <React.StrictMode>
     <Web3ReactProvider getLibrary={getLibrary}>
-      <App />
+        <App />
     </Web3ReactProvider>
   </React.StrictMode>,
   document.getElementById('root')

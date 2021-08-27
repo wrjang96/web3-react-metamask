@@ -1,6 +1,5 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
-import Account from './Account'
 import { ROUTER_ABI } from '../constant'
 import { ethers } from 'ethers'
 
@@ -12,11 +11,12 @@ function AddLiquidity(){
     
     // uniswapv2router주소
     const onClick = () => {
-        routerContract.addLiquidityETH(
+        routerContract.addLiquidity(
             '0xaD6D458402F60fD3Bd25163575031ACDce07538D',
-            ethers.utils.parseEther("0.1"),
-            // 알아서 빅넘버로 바꿔줌   
-            '0','0', '0xE74A0D2C3A38bdFCF667a38425387567Ea872384', 
+            '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
+            ethers.utils.parseEther("0.00000000005"),
+            '0','0', 
+            '0xE74A0D2C3A38bdFCF667a38425387567Ea872384', 
             Math.floor(Date.now() / 1000) + 60 * 20,
             {value:ethers.utils.parseEther("0.01"),gasLimit: ethers.utils.hexlify(250000), gasPrice: ethers.utils.parseUnits('5', "gwei")}
 
@@ -24,9 +24,11 @@ function AddLiquidity(){
 
     }
     return (
+        <div>
         <button onClick = {onClick}> 
             Add Liquidity
         </button>
+        </div>
     )
 
 }
